@@ -1,0 +1,11 @@
+class Solution:
+    def isHappy(self,n):
+        if n<=9:
+            return n==1 or n==7
+        s=0
+        while(n):
+            d=n%10
+            n=n//10
+            s=s+(d*d)
+        return self.isHappy(s)
+        
