@@ -1,0 +1,26 @@
+class Personal:
+    def __init__(self,name,phno):
+        self.name=name
+        self.phno=phno
+    def display(self):
+        print(self.name,self.phno)
+class Employee(Personal):
+    def __init__(self,empid,salary,name,phno):
+        self.empid=empid
+        self.salary=salary
+        super().__init__(name,phno)
+    def display(self):
+        print(self.empid,self.salary)
+        super().display()
+class Student(Personal):
+    def __init__(self,rollno,branch,name,phno):
+        self.rollno=rollno
+        self.branch=branch
+        super().__init__(name,phno)
+    def display(self):
+        print(self.rollno,self.branch)
+        super().display()
+s1=Student(125,75000,"Chaitanya",9491218861)        
+s2=Student(123,"IT","Keerthana",9392569268)
+s1.display()
+s2.display()
